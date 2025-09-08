@@ -76,6 +76,39 @@ ul {
   color: var(--color-light);
 }
 
+/* New logo image styling */
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* Smooth transitions for navigation links */
+.nav a {
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Subtle hover effects for cards and sections */
+.stats-grid .stat-card,
+.process-grid .process-card,
+.testimonials-slider .testimonial,
+.articles-grid article,
+.portfolio-grid .case-study {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-grid .stat-card:hover,
+.process-grid .process-card:hover,
+.testimonials-slider .testimonial:hover,
+.articles-grid article:hover,
+.portfolio-grid .case-study:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .nav ul {
   display: flex;
   align-items: center;
