@@ -13,7 +13,11 @@
 <body>
     <header class="header">
         <div class="container nav-container">
-            <div class="logo"><a href="index.html"><span class="logo-icon">DH</span> <span class="logo-text">Dominion Holdings</span></a></div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Dominion Holdings logo" class="logo-img">
+                </a>
+            </div>
             <nav class="nav" id="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -29,14 +33,14 @@
         </div>
     </header>
 
-    <section class="page-hero" style="background-color: var(--color-dark); color: var(--color-light); padding: 80px 0; text-align:center;">
+    <section class="page-hero fade-in" style="background-color: var(--color-dark); color: var(--color-light); padding: 80px 0; text-align:center;">
         <div class="container">
             <h1>Our Approach</h1>
             <p>We look beyond numbers to find great service‑based businesses with heart and potential.</p>
         </div>
     </section>
 
-    <section class="page-content" style="padding: 60px 0;">
+    <section class="page-content fade-in" style="padding: 60px 0;">
         <div class="container">
             <h2>Investment Philosophy</h2>
             <p>At Dominion Holdings, we invest in small to mid‑sized service businesses that are profitable, resilient and loved by their customers. We believe in patient capital and long‑term stewardship. Our approach is not about flipping companies for a quick profit but rather partnering with owners to expand what they’ve built.</p>
@@ -52,7 +56,7 @@
         </div>
     </section>
 
-    <section class="cta-banner">
+    <section class="cta-banner fade-in">
         <div class="container">
             <h2>Curious if your business fits?</h2>
             <p>Reach out to explore your options. We’ll provide honest feedback, even if we’re not the right buyer.</p>
@@ -63,7 +67,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <div class="logo"><span class="logo-icon">DH</span> <span class="logo-text">Dominion Holdings</span></div>
+                <div class="logo"><img src="logo.png" alt="Dominion Holdings logo" class="logo-img"></div>
                 <p>Acquiring service‑based businesses. Building legacies.</p>
             </div>
             <div class="footer-links">
@@ -87,5 +91,16 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <!-- Crisp Chat Widget: replace YOUR-CRISP-IDENTIFIER with your Crisp website ID -->
+    <script type="text/javascript">
+      window.$crisp=[];
+      window.CRISP_WEBSITE_ID="YOUR-CRISP-IDENTIFIER";
+      (function(){
+        var d=document,s=d.createElement("script");
+        s.src="https://client.crisp.chat/l.js";
+        s.async=1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
 </body>
 </html>

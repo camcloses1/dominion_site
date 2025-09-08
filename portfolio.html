@@ -13,7 +13,11 @@
 <body>
     <header class="header">
         <div class="container nav-container">
-            <div class="logo"><a href="index.html"><span class="logo-icon">DH</span> <span class="logo-text">Dominion Holdings</span></a></div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Dominion Holdings logo" class="logo-img">
+                </a>
+            </div>
             <nav class="nav" id="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -29,14 +33,22 @@
         </div>
     </header>
 
-    <section class="page-hero" style="background-color: var(--color-dark); color: var(--color-light); padding: 80px 0; text-align:center;">
+    <section class="page-hero fade-in" style="background-color: var(--color-dark); color: var(--color-light); padding: 80px 0; text-align:center;">
         <div class="container">
             <h1>Portfolio & Case Studies</h1>
             <p>See how we help service‑based companies grow sustainably.</p>
         </div>
     </section>
 
-    <section class="page-content" style="padding: 60px 0;">
+    <!-- Interactive Case Studies Chart -->
+    <section class="case-chart fade-in" style="padding: 60px 0;">
+        <div class="container">
+            <h2>Performance Growth</h2>
+            <canvas id="caseChart" style="width:100%; max-height:400px;"></canvas>
+        </div>
+    </section>
+
+    <section class="page-content fade-in" style="padding: 60px 0;">
         <div class="container">
             <h2>Our Companies</h2>
             <p>We’re proud to partner with leaders in landscaping, facilities management, commercial cleaning and other essential services. Below are examples of companies we’ve acquired and the outcomes of our collaboration.</p>
@@ -60,7 +72,7 @@
         </div>
     </section>
 
-    <section class="cta-banner">
+    <section class="cta-banner fade-in">
         <div class="container">
             <h2>Interested in partnering with us?</h2>
             <p>Let’s discuss how we can help scale your service business.</p>
@@ -71,7 +83,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <div class="logo"><span class="logo-icon">DH</span> <span class="logo-text">Dominion Holdings</span></div>
+                <div class="logo"><img src="logo.png" alt="Dominion Holdings logo" class="logo-img"></div>
                 <p>Acquiring service‑based businesses. Building legacies.</p>
             </div>
             <div class="footer-links">
@@ -94,6 +106,53 @@
         </div>
     </footer>
 
+    <!-- Chart.js for interactive bar chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('caseChart');
+        if (ctx) {
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['LawnsPlus','CleanCo','HomeFix'],
+                    datasets: [
+                        {
+                            label: 'Before ($M)',
+                            data: [4, 3, 2],
+                            backgroundColor: 'rgba(201, 161, 93, 0.6)'
+                        },
+                        {
+                            label: 'After ($M)',
+                            data: [6.5, 4.0, 2.8],
+                            backgroundColor: 'rgba(3, 29, 66, 0.6)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    });
+    </script>
     <script src="js/script.js"></script>
+    <!-- Crisp Chat Widget: replace YOUR-CRISP-IDENTIFIER with your Crisp website ID -->
+    <script type="text/javascript">
+      window.$crisp=[];
+      window.CRISP_WEBSITE_ID="YOUR-CRISP-IDENTIFIER";
+      (function(){
+        var d=document,s=d.createElement("script");
+        s.src="https://client.crisp.chat/l.js";
+        s.async=1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
 </body>
 </html>

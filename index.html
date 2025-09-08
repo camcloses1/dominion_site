@@ -15,7 +15,9 @@
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <a href="index.html"><span class="logo-icon">DH</span> <span class="logo-text">Dominion&nbsp;Holdings</span></a>
+                <a href="index.html">
+                    <img src="logo.png" alt="Dominion Holdings logo" class="logo-img">
+                </a>
             </div>
             <nav class="nav" id="navbar">
                 <ul>
@@ -32,8 +34,8 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section with bespoke background image -->
+    <section class="hero" style="background-image: linear-gradient(rgba(3,29,66,0.7), rgba(3,29,66,0.7)), url('hero.png'); background-size: cover; background-position: center;">
         <div class="container hero-content">
             <h1>Exit with Confidence</h1>
             <p>Dominion Holdings acquires and scales service‑based businesses while preserving your people, brand and culture. Let’s plan a smooth transition.</p>
@@ -45,7 +47,7 @@
     </section>
 
     <!-- Why Dominion Section -->
-    <section class="why">
+    <section class="why fade-in">
         <div class="container">
             <h2>Why Dominion?</h2>
             <p class="section-intro">We’re builders, not flippers. Our mission is to acquire profitable service‑based companies, protect the teams behind them and enhance what already works.</p>
@@ -66,8 +68,29 @@
         </div>
     </section>
 
+    <!-- Icon Benefits Section -->
+    <section class="icon-section fade-in">
+        <div class="container">
+            <div class="icon-card">
+                <img src="icon-legacy.png" alt="Legacy preservation icon">
+                <h3>Legacy Preservation</h3>
+                <p>We protect your story and keep your team intact, ensuring your hard‑earned legacy lives on.</p>
+            </div>
+            <div class="icon-card">
+                <img src="icon-growth.png" alt="Growth and innovation icon">
+                <h3>Growth &amp; Innovation</h3>
+                <p>We bring modern technology and best practices to scale operations and unlock new opportunities.</p>
+            </div>
+            <div class="icon-card">
+                <img src="icon-service.png" alt="Service excellence icon">
+                <h3>Service Excellence</h3>
+                <p>We respect the craft and empower your employees to thrive in a culture of excellence.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Section -->
-    <section class="process">
+    <section class="process fade-in">
         <div class="container">
             <h2>How It Works</h2>
             <div class="process-steps">
@@ -96,7 +119,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials fade-in">
         <div class="container">
             <h2>What Sellers Are Saying</h2>
             <div class="testimonial-slider" id="testimonialSlider">
@@ -121,7 +144,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq fade-in">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
@@ -152,7 +175,7 @@
     </section>
 
     <!-- Contact Call to Action Section -->
-    <section class="cta-banner">
+    <section class="cta-banner fade-in">
         <div class="container">
             <h2>Ready to explore your exit?</h2>
             <p>Contact us today to see if there’s a fit. We’ll respond within one business day.</p>
@@ -165,7 +188,7 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <div class="logo">
-                    <span class="logo-icon">DH</span> <span class="logo-text">Dominion Holdings</span>
+                    <img src="logo.png" alt="Dominion Holdings logo" class="logo-img"/>
                 </div>
                 <p>Acquiring service‑based businesses. Building legacies.</p>
             </div>
@@ -190,5 +213,17 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <!-- Crisp Chat Widget: replace YOUR-CRISP-IDENTIFIER with your Crisp website ID -->
+    <script type="text/javascript">
+      window.$crisp=[];
+      window.CRISP_WEBSITE_ID="YOUR-CRISP-IDENTIFIER";
+      (function(){
+        var d=document;
+        var s=d.createElement("script");
+        s.src="https://client.crisp.chat/l.js";
+        s.async=1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
 </body>
 </html>

@@ -6,6 +6,8 @@
   --color-text: #0f293e;
   --color-muted: #697386;
   --max-width: 1120px;
+  /* Secondary accent colour for subtle highlights */
+  --color-accent-secondary: #6e8dc1;
 }
 
 * {
@@ -163,13 +165,45 @@ ul {
   cursor: pointer;
 }
 
+/* Fade-in animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Hero Section */
+
+/* Base hero styling; fallback dark background */
 .hero {
   background: var(--color-dark);
   color: var(--color-light);
   padding: 80px 0 100px;
   text-align: center;
   position: relative;
+}
+
+/* Special hero variant with background image and subtle zoom animation.  
+   Apply this class in HTML to enable the animated photo background on the  
+   landing page while retaining the same spacing and typography. */
+.hero.hero-image {
+  background-image: linear-gradient(rgba(3, 29, 66, 0.7), rgba(3, 29, 66, 0.8)), url('../hero-photo.png');
+  background-size: cover;
+  background-position: center;
+  animation: zoom-bg 30s ease-in-out infinite alternate;
+}
+
+@keyframes zoom-bg {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 110%;
+  }
 }
 
 .hero-content h1 {
@@ -184,6 +218,47 @@ ul {
   margin: 0 auto 2rem;
   font-size: 1.1rem;
   color: var(--color-muted);
+}
+
+/* Icon Benefits Section */
+.icon-section {
+  background-color: #f1f4fa;
+  padding: 4rem 0;
+}
+.icon-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.icon-card {
+  flex: 1 1 30%;
+  background-color: var(--color-light);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.icon-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+.icon-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--color-dark);
+}
+.icon-card p {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+.icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .hero-cta {
