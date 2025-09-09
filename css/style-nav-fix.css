@@ -1,0 +1,10 @@
+/* --- Dominion Nav CSS Fix --- */
+header.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* keep header above any hero overlays */
+}
+/* Ensure clicks reach header even if a hero overlay exists */
+.hero, .hero::before, .hero::after {
+  pointer-events: auto;
+}
