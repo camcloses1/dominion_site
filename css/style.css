@@ -763,9 +763,11 @@ ul {
   border-bottom-left-radius: 0;
 }
 
-/* ===== Dominion brand overrides (DO NOT REMOVE) ===== */
+/* ===== Dominion brand overrides (centered founder portrait patch) ===== */
 :root{--gold:#D4AF37;}
-.hero .hero-content h1{color:var(--gold) !important;}              /* hero headline gold */
-.hero .hero-content p{color:#e7eef9 !important;}                   /* better contrast on hero text */
-.footer .footer-brand p{color:var(--gold) !important;}             /* tagline gold */
-.copyright, .copyright p{color:#ffffff !important;}                /* copyright white */
+.hero .hero-content h1{color:var(--gold) !important;}
+.hero .hero-content p{color:#e7eef9 !important;}
+.footer .footer-brand p{color:var(--gold) !important;}
+.copyright, .copyright p{color:#ffffff !important;}
+/* Centered founder image utility */
+.founder-portrait{display:block;max-width:520px;width:100%;height:auto;margin:18px auto 22px;border-radius:8px;box-shadow:0 8px 22px rgba(0,0,0,.15);}
