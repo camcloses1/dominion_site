@@ -1,4 +1,3 @@
-:root{--gold:#D4AF37;}
 /* Global Styles */
 :root {
   --color-dark: #031d42; /* deep blue for backgrounds */
@@ -764,8 +763,9 @@ ul {
   border-bottom-left-radius: 0;
 }
 
-/* === Dominion patch (hero + footer) === */
-.hero .hero-content h1{color:#D4AF37 !important;}
-.hero .hero-content p{color:#e7eef9 !important;}
-.footer .footer-brand p{color:#D4AF37 !important;}
-.copyright p, .copyright{color:#ffffff !important;}
+/* ===== Dominion brand overrides (DO NOT REMOVE) ===== */
+:root{--gold:#D4AF37;}
+.hero .hero-content h1{color:var(--gold) !important;}              /* hero headline gold */
+.hero .hero-content p{color:#e7eef9 !important;}                   /* better contrast on hero text */
+.footer .footer-brand p{color:var(--gold) !important;}             /* tagline gold */
+.copyright, .copyright p{color:#ffffff !important;}                /* copyright white */
