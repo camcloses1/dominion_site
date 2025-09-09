@@ -762,3 +762,14 @@ ul {
   color: var(--color-dark);
   border-bottom-left-radius: 0;
 }
+
+/* === Dominion patch (2025-09): brand fixes === */
+:root{ --gold:#D4AF37; }
+/* Hero headline set to white */
+.hero .hero-content h1{ color:#ffffff !important; }
+/* Ensure hero paragraph readable on photo */
+.hero .hero-content p{ color:#e7eef9 !important; }
+/* Footer tagline gold */
+.footer .footer-brand p{ color:#D4AF37 !important; }
+/* Copyright white */
+.copyright, .copyright p{ color:#ffffff !important; }
