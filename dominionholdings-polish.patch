@@ -1,0 +1,365 @@
+From 4f2f0b2 Mon Sep 9 12:00:00 2025
+From: ChatGPT <bot@openai.com>
+Date: Tue, 09 Sep 2025 12:00:00 -0400
+Subject: polish: SEO, a11y, redirects, consistent nav, contact fixes
+
+diff --git a/index.html b/index.html
+index 1111111..2222222 100644
+--- a/index.html
++++ b/index.html
+@@ -1,8 +1,38 @@
+ <head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>Dominion Holdings</title>
+-  <link rel="stylesheet" href="/css/style.css">
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>Dominion Holdings | Exit with Confidence</title>
++  <meta name="description" content="Dominion Holdings acquires and scales service based businesses while protecting people, brand, and culture. Plan a smooth values aligned exit." />
++  <link rel="canonical" href="https://dominionholdings.co/" />
++
++  <link rel="icon" href="/favicon.ico" />
++  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
++
++  <meta property="og:type" content="website" />
++  <meta property="og:url" content="https://dominionholdings.co/" />
++  <meta property="og:title" content="Dominion Holdings | Exit with Confidence" />
++  <meta property="og:description" content="We buy and grow service based businesses while preserving legacy." />
++  <meta property="og:image" content="https://dominionholdings.co/assets/og-cover.jpg" />
++
++  <meta name="twitter:card" content="summary_large_image" />
++  <meta name="twitter:title" content="Dominion Holdings | Exit with Confidence" />
++  <meta name="twitter:description" content="We buy and grow service based businesses while preserving legacy." />
++  <meta name="twitter:image" content="https://dominionholdings.co/assets/og-cover.jpg" />
++
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
++  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
++  <link rel="stylesheet" href="/css/style.css" />
+ </head>
+ <body>
+-  <nav class="site-nav">
+-    <a href="/index.html" class="logo"><img src="/assets/logo.svg" alt="Image: Dominion Holdings"></a>
+-    <ul><li><a href="/about.html">About</a></li><li><a href="/our-approach.html">Our Approach</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html" class="btn">Schedule a Consultation</a></li></ul>
++  <nav class="site-nav" aria-label="Primary">
++    <a href="/index.html" class="logo" aria-label="Dominion Holdings Home">
++      <img src="/assets/logo.svg" alt="Dominion Holdings" width="120" height="28" loading="lazy">
++    </a>
++    <ul>
++      <li><a href="/about.html">About</a></li>
++      <li><a href="/approach.html">Approach</a></li>
++      <li><a href="/portfolio.html">Portfolio</a></li>
++      <li><a href="/resources.html">Resources</a></li>
++      <li><a href="/faq.html">FAQ</a></li>
++      <li><a href="/contact.html" class="btn">Contact</a></li>
++    </ul>
+   </nav>
+@@ -25,9 +55,21 @@
+-  <img src="/assets/hero.jpg" alt="Image: Owner shaking hands with buyer">
++  <img src="/assets/hero.jpg" alt="Owner shaking hands with buyer" width="1600" height="900" loading="lazy">
+
+   <!-- rest of homepage -->
++
++  <!-- Organization schema -->
++  <script type="application/ld+json">
++  {
++    "@context": "https://schema.org",
++    "@type": "Organization",
++    "name": "Dominion Holdings LLC",
++    "url": "https://dominionholdings.co/",
++    "logo": "https://dominionholdings.co/assets/logo.svg",
++    "email": "info@dominionholdings.co",
++    "telephone": "+1-757-447-2578",
++    "address": {"@type":"PostalAddress","streetAddress":"4445 Corporation Ln Ste 259","addressLocality":"Virginia Beach","addressRegion":"VA","postalCode":"23462","addressCountry":"US"}
++  }
++  </script>
+ </body>
+ </html>
+diff --git a/about.html b/about.html
+index 3333333..4444444 100644
+--- a/about.html
++++ b/about.html
+@@ -1,12 +1,29 @@
+ <head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>About</title>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>About | Dominion Holdings</title>
++  <meta name="description" content="Learn about the mission and values behind Dominion Holdings and how we preserve legacy while growing companies." />
++  <link rel="canonical" href="https://dominionholdings.co/about.html" />
++  <link rel="icon" href="/favicon.ico" />
++  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+   <link rel="stylesheet" href="/css/style.css">
+ </head>
+ <body>
+-  <nav class="site-nav">
+-    <a href="/index.html" class="logo"><img src="/assets/logo.svg" alt="Image: Dominion Holdings"></a>
+-    <ul><li><a href="/about.html">About</a></li><li><a href="/our-approach.html">Our Approach</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html" class="btn">Schedule a Consultation</a></li></ul>
++  <nav class="site-nav" aria-label="Primary">
++    <a href="/index.html" class="logo" aria-label="Dominion Holdings Home">
++      <img src="/assets/logo.svg" alt="Dominion Holdings" width="120" height="28" loading="lazy">
++    </a>
++    <ul>
++      <li><a href="/about.html" aria-current="page">About</a></li>
++      <li><a href="/approach.html">Approach</a></li>
++      <li><a href="/portfolio.html">Portfolio</a></li>
++      <li><a href="/resources.html">Resources</a></li>
++      <li><a href="/faq.html">FAQ</a></li>
++      <li><a href="/contact.html" class="btn">Contact</a></li>
++    </ul>
+   </nav>
+-  <img src="/assets/team.jpg" alt="Image: leadership team">
++  <img src="/assets/team.jpg" alt="Leadership team" width="1600" height="900" loading="lazy">
+   <!-- page content -->
+ </body>
+ </html>
+diff --git a/approach.html b/approach.html
+index 5555555..6666666 100644
+--- a/approach.html
++++ b/approach.html
+@@ -1,12 +1,28 @@
+ <head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>Our Approach</title>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>Approach | Dominion Holdings</title>
++  <meta name="description" content="Our approach to buying and growing service businesses while protecting your legacy and team." />
++  <link rel="canonical" href="https://dominionholdings.co/approach.html" />
+   <link rel="stylesheet" href="/css/style.css">
+ </head>
+ <body>
+-  <nav class="site-nav">
+-    <a href="/index.html" class="logo"><img src="/assets/logo.svg" alt="Image: Dominion Holdings"></a>
+-    <ul><li><a href="/about.html">About</a></li><li><a href="/our-approach.html" aria-current="page">Our Approach</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html" class="btn">Schedule a Consultation</a></li></ul>
++  <nav class="site-nav" aria-label="Primary">
++    <a href="/index.html" class="logo" aria-label="Dominion Holdings Home">
++      <img src="/assets/logo.svg" alt="Dominion Holdings" width="120" height="28" loading="lazy">
++    </a>
++    <ul>
++      <li><a href="/about.html">About</a></li>
++      <li><a href="/approach.html" aria-current="page">Approach</a></li>
++      <li><a href="/portfolio.html">Portfolio</a></li>
++      <li><a href="/resources.html">Resources</a></li>
++      <li><a href="/faq.html">FAQ</a></li>
++      <li><a href="/contact.html" class="btn">Contact</a></li>
++    </ul>
+   </nav>
+-  <img src="/assets/values.jpg" alt="Image: values and process">
++  <img src="/assets/values.jpg" alt="Values and process" width="1600" height="900" loading="lazy">
+   <!-- page content -->
+ </body>
+ </html>
+diff --git a/portfolio.html b/portfolio.html
+index 7777777..8888888 100644
+--- a/portfolio.html
++++ b/portfolio.html
+@@ -1,12 +1,27 @@
+ <head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>Portfolio</title>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>Portfolio and Case Studies | Dominion Holdings</title>
++  <meta name="description" content="A look at the companies we back and the outcomes we target for owners and teams." />
++  <link rel="canonical" href="https://dominionholdings.co/portfolio.html" />
+   <link rel="stylesheet" href="/css/style.css">
+ </head>
+ <body>
+-  <nav class="site-nav">
+-    <a href="/index.html" class="logo"><img src="/assets/logo.svg" alt="Image: Dominion Holdings"></a>
+-    <ul><li><a href="/about.html">About</a></li><li><a href="/our-approach.html">Our Approach</a></li><li><a href="/portfolio.html" aria-current="page">Portfolio</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html" class="btn">Schedule a Consultation</a></li></ul>
++  <nav class="site-nav" aria-label="Primary">
++    <a href="/index.html" class="logo" aria-label="Dominion Holdings Home">
++      <img src="/assets/logo.svg" alt="Dominion Holdings" width="120" height="28" loading="lazy">
++    </a>
++    <ul>
++      <li><a href="/about.html">About</a></li>
++      <li><a href="/approach.html">Approach</a></li>
++      <li><a href="/portfolio.html" aria-current="page">Portfolio</a></li>
++      <li><a href="/resources.html">Resources</a></li>
++      <li><a href="/faq.html">FAQ</a></li>
++      <li><a href="/contact.html" class="btn">Contact</a></li>
++    </ul>
+   </nav>
+-  <img src="/assets/portfolio.jpg" alt="Image: portfolio overview">
++  <img src="/assets/portfolio.jpg" alt="Portfolio overview" width="1600" height="900" loading="lazy">
+   <!-- page content -->
+ </body>
+ </html>
+diff --git a/resources.html b/resources.html
+index 9999999..aaaaaaa 100644
+--- a/resources.html
++++ b/resources.html
+@@ -1,12 +1,28 @@
+ <head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>Resources</title>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>Resources | Dominion Holdings</title>
++  <meta name="description" content="Guides and tools that help owners plan a smooth exit and protect legacy." />
++  <link rel="canonical" href="https://dominionholdings.co/resources.html" />
+   <link rel="stylesheet" href="/css/style.css">
+ </head>
+ <body>
+-  <nav class="site-nav">
+-    <a href="/index.html" class="logo"><img src="/assets/logo.svg" alt="Image: Dominion Holdings"></a>
+-    <ul><li><a href="/about.html">About</a></li><li><a href="/our-approach.html">Our Approach</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/resources.html" aria-current="page">Resources</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html" class="btn">Schedule a Consultation</a></li></ul>
++  <nav class="site-nav" aria-label="Primary">
++    <a href="/index.html" class="logo" aria-label="Dominion Holdings Home">
++      <img src="/assets/logo.svg" alt="Dominion Holdings" width="120" height="28" loading="lazy">
++    </a>
++    <ul>
++      <li><a href="/about.html">About</a></li>
++      <li><a href="/approach.html">Approach</a></li>
++      <li><a href="/portfolio.html">Portfolio</a></li>
++      <li><a href="/resources.html" aria-current="page">Resources</a></li>
++      <li><a href="/faq.html">FAQ</a></li>
++      <li><a href="/contact.html" class="btn">Contact</a></li>
++    </ul>
+   </nav>
+-  <a href="https://www.linkedin.com/newsletters/" target="_blank">Subscribe on LinkedIn</a>
++  <a href="https://www.linkedin.com/newsletters/" target="_blank" rel="noopener">Subscribe on LinkedIn</a>
+   <!-- page content -->
+ </body>
+ </html>
+diff --git a/faq.html b/faq.html
+index bbbbbbb..ccccccc 100644
+--- a/faq.html
++++ b/faq.html
+@@ -1,12 +1,30 @@
+ <head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>FAQ</title>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>FAQ | Dominion Holdings</title>
++  <meta name="description" content="Answers to common questions about selling your company to Dominion Holdings." />
++  <link rel="canonical" href="https://dominionholdings.co/faq.html" />
+   <link rel="stylesheet" href="/css/style.css">
+ </head>
+ <body>
+-  <nav class="site-nav">
+-    <a href="/index.html" class="logo"><img src="/assets/logo.svg" alt="Image: Dominion Holdings"></a>
+-    <ul><li><a href="/about.html">About</a></li><li><a href="/our-approach.html">Our Approach</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/faq.html" aria-current="page">FAQ</a></li><li><a href="/contact.html" class="btn">Schedule a Consultation</a></li></ul>
++  <nav class="site-nav" aria-label="Primary">
++    <a href="/index.html" class="logo" aria-label="Dominion Holdings Home">
++      <img src="/assets/logo.svg" alt="Dominion Holdings" width="120" height="28" loading="lazy">
++    </a>
++    <ul>
++      <li><a href="/about.html">About</a></li>
++      <li><a href="/approach.html">Approach</a></li>
++      <li><a href="/portfolio.html">Portfolio</a></li>
++      <li><a href="/resources.html">Resources</a></li>
++      <li><a href="/faq.html" aria-current="page">FAQ</a></li>
++      <li><a href="/contact.html" class="btn">Contact</a></li>
++    </ul>
+   </nav>
++  <!-- normalize US spelling in content: honor, prioritize, etc -->
+   <!-- page content -->
+ </body>
+ </html>
+diff --git a/contact.html b/contact.html
+index ddddddd..eeeeeee 100644
+--- a/contact.html
++++ b/contact.html
+@@ -1,12 +1,43 @@
+ <head>
+-  <meta charset="utf-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>Contact</title>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <title>Contact | Dominion Holdings</title>
++  <meta name="description" content="Contact Dominion Holdings. We reply within one business day." />
++  <link rel="canonical" href="https://dominionholdings.co/contact.html" />
+   <link rel="stylesheet" href="/css/style.css">
+ </head>
+ <body>
+-  <nav class="site-nav">
+-    <a href="/index.html" class="logo"><img src="/assets/logo.svg" alt="Image: Dominion Holdings"></a>
+-    <ul><li><a href="/about.html">About</a></li><li><a href="/our-approach.html">Our Approach</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html" class="btn" aria-current="page">Schedule a Consultation</a></li></ul>
++  <nav class="site-nav" aria-label="Primary">
++    <a href="/index.html" class="logo" aria-label="Dominion Holdings Home">
++      <img src="/assets/logo.svg" alt="Dominion Holdings" width="120" height="28" loading="lazy">
++    </a>
++    <ul>
++      <li><a href="/about.html">About</a></li>
++      <li><a href="/approach.html">Approach</a></li>
++      <li><a href="/portfolio.html">Portfolio</a></li>
++      <li><a href="/resources.html">Resources</a></li>
++      <li><a href="/faq.html">FAQ</a></li>
++      <li><a href="/contact.html" class="btn" aria-current="page">Contact</a></li>
++    </ul>
+   </nav>
+-  <!-- existing content -->
++  <section aria-labelledby="contactTitle" class="contact">
++    <h1 id="contactTitle">Get in Touch</h1>
++    <p>Curious what a win win exit could look like. We reply within one business day.</p>
++    <ul class="contact-list">
++      <li><a href="mailto:info@dominionholdings.co">info@dominionholdings.co</a></li>
++      <li><a href="tel:+17574472578">(757) 447-2578</a></li>
++      <li><address>4445 Corporation Ln Ste 259, Virginia Beach, VA 23462</address></li>
++    </ul>
++    <!-- If you want scheduling embed later, uncomment:
++    <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_HANDLE/intro" style="min-width:320px;height:700px;"></div>
++    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
++    -->
++  </section>
+ </body>
+ </html>
+diff --git a/css/style.css b/css/style.css
+index ffffff0..fffff11 100644
+--- a/css/style.css
++++ b/css/style.css
+@@ -1,3 +1,21 @@
+ /* existing styles */
++
++/* buttons and nav a11y focus */
++.site-nav a:focus,
++.btn:focus {
++  outline: 2px solid #0A2342;
++  outline-offset: 2px;
++}
++.site-nav [aria-current="page"] {
++  text-decoration: underline;
++  text-underline-offset: 4px;
++}
++
++/* images default sizing fallback */
++img[loading="lazy"] {
++  background-color: #f6f7f8;
++}
++
++.contact .contact-list { list-style: none; padding: 0; }
++.contact .contact-list li { margin: 0.25rem 0; }
+diff --git a/_redirects b/_redirects
+new file mode 100644
+index 0000000..1234567
+--- /dev/null
++++ b/_redirects
+@@ -0,0 +1,4 @@
++# Permanent redirects for old indexed Wix style paths
++/book-online                                /contact.html                 301
++/service-page/landscaping-advisory          /resources.html               301
++/blank-1                                    /                              301
+diff --git a/robots.txt b/robots.txt
+new file mode 100644
+index 0000000..2222221
+--- /dev/null
++++ b/robots.txt
+@@ -0,0 +1,6 @@
++User-agent: *
++Disallow:
++Sitemap: https://dominionholdings.co/sitemap.xml
++
++# helpful allow for faster indexing
++Host: dominionholdings.co
