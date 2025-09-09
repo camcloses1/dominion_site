@@ -762,3 +762,14 @@ ul {
   color: var(--color-dark);
   border-bottom-left-radius: 0;
 }
+
+/* === Dominion patch (gold hero headline version) === */
+:root{ --gold:#D4AF37; }
+/* Hero headline GOLD */
+.hero .hero-content h1{ color:#D4AF37 !important; }
+/* Improve hero body contrast */
+.hero .hero-content p{ color:#e7eef9 !important; }
+/* Footer tagline gold */
+.footer .footer-brand p{ color:#D4AF37 !important; }
+/* Copyright white */
+.copyright, .copyright p{ color:#ffffff !important; }
